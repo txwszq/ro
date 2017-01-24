@@ -26,8 +26,14 @@ import java.util.regex.Pattern;
 public class HomeController {
 
 
-    @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE   )
-    public Map home(String key) {
+    @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String home() {
+
+        return "hello";
+    }
+
+    @RequestMapping(value = "/daoju", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Map daoju(String key) {
 
         String url = "http://wiki.joyme.com";
         Map result = new HashMap<>();
